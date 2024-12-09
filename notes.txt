@@ -20,7 +20,7 @@ https://github.com/ZeNGrooT147/python_samsung
 	
 4. Cofigure your github account on your system.
 	$ git config --global user.name "ZeNGrooT147"
-	$ get config --global user.email "suhasgosal47@gmail.com"
+	$ git config --global user.email "suhasgosal47@gmail.com"
 
 5. Steps to create PAT (personal access token)
 	1. Click on Profile Pic (Right Top most corner) -> Click settings
