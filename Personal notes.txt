@@ -8,8 +8,9 @@
 	ii) git config --global user.name " " && git config --global user.email" " (If the system asks for verification).
 	iii) git pull (It pulls the file or anything from the repo in cloud/remote to the desktop/local).
 	iv) git add (to add everything) /git add .(for current directory) -> To track the files or folders and they are ready to commit.
-	v) git commit -m " " -> to commit them and they are ready to be pushed.
+	v) git commit -m " " -> to commit them and they are ready to be pushed.(Mainly it will convert the file into object).Git converts the files into objects (blobs) and stores them in the Git database 
 	vi) git push (Though before pushing it pulls implicitly to ensure that updates are in syncs and this pushes the files which are in track to the remote repo).
+	vii) U cant push empty directory as it wont track.Only tracks files and their content.
 Creating one more sub file in the folder you need to enter the folder and then use (/)(backward slash).
 And the "main" is like the parent node like u can create how many branches u want but main is just one.
 
