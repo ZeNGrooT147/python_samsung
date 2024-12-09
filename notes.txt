@@ -33,5 +33,5 @@ https://github.com/ZeNGrooT147/python_samsung
 	8. Do no other changes and scroll down -> Click generate token
 	9. Copy the PAT and mail/whatsApp to yourself 
 	
---> DAY 2 TUESDAY 10-12-2024
+--> DAY 2 TUESDAY 10-12-2024py8pyp
 
