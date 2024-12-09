@@ -10,7 +10,8 @@
 	iv) git add (to add everything) /git add .(for current directory) -> To track the files or folders and they are ready to commit.
 	v) git commit -m " " -> to commit them and they are ready to be pushed.
 	vi) git push (Though before pushing it pulls implicitly to ensure that updates are in syncs and this pushes the files which are in track to the remote repo).
-Creating one more sub file in the folder you need to enter the folder and then use (/)(backward slash)
+Creating one more sub file in the folder you need to enter the folder and then use (/)(backward slash).
+And the "main" is like the parent node like u can create how many branches u want but main is just one.
 
 4) And basically creating a PAN ( Personal Access Token ) which is like a two factor autentication and improved security
    To clone with the the improved security use(https://'PAT'@github.com/ZeNGrooT147/python_samsung)
