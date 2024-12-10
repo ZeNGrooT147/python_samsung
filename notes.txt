@@ -36,7 +36,7 @@ https://github.com/ZeNGrooT147/python_samsung
 --> DAY 2 TUESDAY 10-12-2024
 
 To download a public Repo, use the below command:
-$ git clone https://github.com/neelmyna/kleit_dec2024
+$ git clone and the Repo
 
 To set the Configurations:
 $ git config --global user.name "your_git_username"
@@ -186,4 +186,7 @@ If it is raining and lightning, then do not go out. If it is only raining then e
 
  
 ----------------------------------------------------
+
+
 10.
+
