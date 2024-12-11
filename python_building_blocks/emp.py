@@ -28,8 +28,9 @@ print('%-4d %-12s %-14.2f %-12.2f %-9.2f %-14.2f %-.2f' % (emp_id, name, basic_s
 print(f'\nStandard Deduction = {standard_deduction}')
 print(f'Taxable Income = {taxable_income}')
 
-
-
+print("Tax Slab:\n(*) $ 0 - $ 3,00,000 : 0% \n(*) $ 3,00,001 - $ 6,00,000 : 5% \n(*) $ 6,00,001 - $ 9,00,000 : 10% \n(*) $ 9,00,001 - $ 12,00,000 : 15% \n(*) $ 12,00,001 - $ 15,00,000 : 20% \n(*) $ Above $ 15,00,000 : 30% \n")
+rebate=input("Do the 87A Rebate Apply for U(yes or no)")
+if rebate==yes
 
 
 
