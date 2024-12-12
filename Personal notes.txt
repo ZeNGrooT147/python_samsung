@@ -2,7 +2,7 @@ DAY 1 (09/12/2024)
 
 1) Basically we have learnt About the Basics of Naming the folder -> which should be all lowercase and setup and organize the folder in correct way.
 
-2) Creating new account,The protocol which google use(HTTP).
+2) Creating new account of Github ,The protocol which google use(HTTP).
 
 3) Git commands ->
 
