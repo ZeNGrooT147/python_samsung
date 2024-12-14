@@ -1,10 +1,21 @@
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 
-import sys
+def nth_prime(n):
+    count = 0  
+    num = 2  
+    while True:
+        if is_prime(num):
+            count += 1
+            if count == n:
+                return num
+        num += 1
 
-input_number = int(sys.argv[1])
-
-
-
-        
-
-       
+n=10
+nth_prime_number = nth_prime(n)
+print(f"The {n}th prime number is: {nth_prime_number}")
