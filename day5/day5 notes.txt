@@ -1,0 +1,12 @@
+
+DAY 5 (13/12/2024)
+
+LIST:
+
+1. List is a DS where all its elements are stored in continuous memory locations
+2. The elements of the list can be of different DTs. A element of a list can be a list itself.
+3. However, it is good practice to have list of elements of same DT.
+4. A list is mutable. Thus we can add and delete elements to/from a list.
+5. List can have duplicate elements.
+6. List is Ordered. That is, we can access list elements using index.
+7. List is a class. Thus we have lot of properties which can be applied on a list.

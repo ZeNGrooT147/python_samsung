@@ -1,3 +1,6 @@
+
+# Sum_of_number
+
 import sys
 
 input_number = int(sys.argv[1])

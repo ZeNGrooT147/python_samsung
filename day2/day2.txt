@@ -1,0 +1,63 @@
+DAY 2 (10/12/2024)
+
+OPERATORS IN PYTHON:
+
+ARITHMETIC OPERATORS:
++ - / // * % **
+
+All are binary operators (Need 2 operands)
+I/P are numbers
+O/P is also a number
+In the expresssion 10 + 5 - 12, addition is performed 1st.
+Hence arithmetic operators have Left to Right Associtivity, except the power operator.
+That is, 10 + 5 + 15 = 15 + 15 = 30
+2 ** 3 ** 2 = 2 ** 9 = 512
+The operator ** has the highest priority/precdence
+Precedence of operators:
+**
+* / // %
++ -
+
+Relational Operators:
+> < >= <= != ==
+All are Binary operators.
+I/P are numbers
+O/P is truth value (boolean)
+They have lesser precedence than arithmetic operators, but higher than logical operators.
+
+What ever we do using >= and <= can be done using > and < respectively.
+For example:
+age >= 20 and age <= 80
+is same as:
+age > 19 and age < 81
+
+[10, 20] Closed Interval
+The range includes the end values
+num >= 10 and num <= 20
+
+(30, 50) Open Interval
+The range is 31 to 49 because it doesn't include the end values
+num > 30 and num < 50
+
+[20, 40) Right Open
+The range is 20 to 39
+num >= 20 and num < 40
+
+A student can enroll into the course if her age is between 18 and 60
+student_age >= 18 and student_age <= 60
+This is more readable
+
+student_age > 17 and student_age < 61
+This is less readable
+---------------------------------------------
+LOGICAL OPERATORS:
+and or not (Strictly Short Circuiting)
+
+I/P are boolean
+O/P is boolean
+not operator is unary (We prefix the not before the value)
+and or are binary operators
+Left to Right Associtivity
+In the expresssion: op1 and op2 or op3
+op1 and op2 is performed 1st
+The o/p of a condition is always passed as i/p to the logical operators.
