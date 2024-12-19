@@ -1,0 +1,12 @@
+
+
+To successfully run the certificate generation project, the following requirements must be met:
+Software Requirements
+
+-->Python: Version 3.6 or higher is required.
+-->Libraries: The following Python libraries must be installed:
+		pandas: For reading CSV files.
+		jinja2: For rendering HTML templates.
+	weasyprint: For converting HTML to PDF.
+
+You can install these libraries using pip:

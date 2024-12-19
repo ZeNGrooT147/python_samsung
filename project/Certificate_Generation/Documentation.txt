@@ -1,0 +1,38 @@
+
+*************DOCUMENTATION***************
+
+*) The project documentation consists of three main 
+
+--PARTICIPANT DATA: A CSV file containing names and USNs.
+--HTML TEMPLATE: A template for the certificate design & some images.
+--PYTHON SCRIPT: A script to process data and generate certificates.
+
+Components-->
+
+1.)PARTICIPANT DATA (data.csv)
+
+	Contains the following fields : Name & USN
+  -Example entries:
+	Suhas, USN001
+	Zen_GrooT, USN002
+	Bobby, USN003
+	Brown, USN004
+	rajat, USN005
+	rarry, USN006
+	Suhas, 2XY
+	
+2.)HTML TEMPLATE (template2.html)
+
+Structure includes:
+Organization Name: www.mtdn.co.in
+Completion Message: "Has successfully completed the training and workshop of 5 days held in September 2024."
+Date: "19 December 2024"
+
+3.)PYTHON SCRIPT (main.py)
+
+Key functionalities:
+Image Encoding: Converts images to Base64 for embedding in HTML.
+CSV Reading: Reads participant data from the CSV file.
+HTML Generation: Uses Jinja2 templating to fill in participant details.
+
+This project effectively integrates data handling, templating, and report generation suitable for educational or training environments.
