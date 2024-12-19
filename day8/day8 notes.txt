@@ -1,0 +1,266 @@
+
+
+DAY 08(16/12/2024)
+
+Quick Sort:
+	quick_sort()
+	partition()
+
+In the Partition, we accessed all the elements of the array to partitioned.
+There were n elements in the array.
+Hence the efficiency of Partition algorithm is O(n)
+
+The quick_sort() function is a recursive function and in each recursive call, we divided the array into 2 parts.
+Hence the efficiency of recursion is O(LogN)
+
+So the total efficiency of Quick sort is O(N LogN)
+
+However, in the worst case (when the input array is already sorted), then we saw that the efficency worsened to O(N square)
+
+WCE: O(N square)
+BCE: O(N LogN)
+-----------------------------------------------------------
+Binary Search:
+BCE: O(1)
+WCE: O(LogN)
+
+--------------------------------------------------------------
+BUBBLE SORT: Brute Force
+
+We start comparing consecutive elements of the array from one of the array to another end/corner.
+If the 1st/left element is bigger than the 2nd/right, then we swap them. And this comparison we continue until end of the array.
+Thus we end up bubbling the biggest number to the end of the array.
+Now this element is in its final postion (It must not be disturbed)
+Now, start again from the beginning and do the same job until the 2nd biggest element is bubbled/moved to its final position.
+
+23  2  12  5  9  15  7
+
+
+2  5  7  9  12  15  23
+
+Before Optimization:
+WCE: O(n2)
+BCE: O(n2)
+
+After Optimization:
+WCE: O(n2)
+BCE: O(n)
+
+When to use and when not to use Bubble sort.
+----------------------------------------------------------------
+Insertion Sort: Decrease and Conquer
+
+What to decrease?
+We decrease the amount of problem.
+We use Optimistic start.
+Even before starting the sort, insertion sort reconizes/observes that there is already a sorted array.
+
+12   44   2   10   9   17   7
+12
+12   44
+2    12   44
+2    10   12   44
+2    9    10   12   44
+2    9    10   12   17    44
+2    7    9    10   12   17    44
+
+
+2    7    9    10   12   17    44
+2
+2    7
+2    7    9
+2    7    9    10
+
+23  17  13   11  7  5  3  2
+23
+17  23
+13  17  23
+13  17  23
+11  13  17  23
+
+When to use Insertion Sort:
+1. When we are sorting an almost sorted array O(n)
+2. When we are sorting a samller sized array  O(n2)
+
+When not to use Insertion Sort:
+When the i/p array is almost sorted and its size is very big and we are sorting in reverse.
+Assume there are One lakh elements and the last 1000 elements has to be inserted at the front end. Here, for every element we have to do approx 10000 shifts. Thus we have a total of 1000 * 100000 = 10(8) shifts
+
+BCE: O(n)
+WCE: O(n2)
+------------------------------------------------------
+Domain:
+	eCommerce, college, library, clinic.....
+
+	Entities:
+	eCommerce: admin, customer, product
+	clinic: receptionist, doctor, patient
+	college: course, student, faculty, principal
+	
+eCommerce:
+	admin: id, name, password
+	customer: id, name, location, ph_number, email
+	product: id, price, m_date, exp_date, category
+	
+Domain -> Sub-Domain -> entities -> attributes -> (DT and constraints)
+
+In Database (mysql, postgres, mongodb, cassendra) we create a database (DB) for every Domain
+And in each DB, we create tables/collections for every entity
+
+A row/document in a table/collection is one instance of the entity.
+The row is also called as tuple/record
+
+airlines:
+	id, code, name, country, category
+
+Entity: flight
+flights
+	id			int			unique		not null	primary key
+	airline_id	int			foreign key
+	source		varchar(32)				not null
+	destination	varchar(32)				not null
+	fare		float					not null	check(fare >= 2000)
+	duratiion	float					not null
+	capacity	int
+	
+Lets use RDBMS
+
+CREATE TABLE IF NOT EXISTS flights(id INT PRIMARY KEY AUTO_INCREMENT, source VARCHAR(32) NOT NULL, destination VARCHAR(32) NOT NULL, fare FLOAT 
+NOT NULL, duratiion FLOAT NOT NULL, capacity int);
+
+insert into flights(source, destination, fare, duratiion, capacity) values('delhi', 'mumbai', 4500, 2.15, 180);
+
+insert into flights(source, destination, fare, duratiion) values('delhi', 'bengaluru', 6500, 3.05);
+
+insert into flights(source, destination, fare, duratiion, capacity) values('delhi', 'mumbai', 4500, 2.15, 180);
+
+insert into flights(source, destination, fare, duratiion) values('delhi', 'bengaluru', 6500, 3.05);
+
+DATABASE NOTES:
+
+connection URL:
+http://localhost:3306
+
+Here 3306 is Port Number
+localhost means we are connecting to locally available (on the same machine/system) instance of mysql.
+
+root is the username of our mysql instance
+
+MYSQL COMMANDS:
+
+mysql> show databases;
+// Lists the available/created databases
+
+mysql> select database();
+// Lists the current database under use
+O/P: NULL  (No DB is selected, i.e., we are not inside any DB)
+
+mysql> use sys;
+// To switch a specific DB
+
+mysql> create database nithin_db;
+// Creates a new database with name "nithin_db"
+
+mysql> show tables;
+// Lists the available tables in the DB we are in.
+
+Constraints in RDBMS:
+unique
+not null
+check
+default
+auto_increment
+primary key
+references
+
+Person
+persons
+	id, name, gender, location, age
+	
+What Entity
+Entity fields
+DT of the fields
+constraints of the fields
+
+field_name	DT			Constraint
+id			int			unique and not null 
+name		varchar(50)	not null
+gender		varchar(2)	
+location	varchar(50)
+age			int			default
+
+create table IF NOT EXISTS persons(id int primary key auto_increment, name varchar(50) not null, gender varchar(2), location varchar(50), age int check(age > 0));
+
+-------------------------------------------------
+select * from persons;
+// To view all fields of the rows in the table
+
+select name, location from persons;
+OR
+select name as "person name", location as city from persons;
+// To list only specific fields of the rows in the table
+
+select location from persons;
+// To list only the location of all rows in the table
+
+select distinct location from persons;
+// To list only the unique locations from the table
+
+select * from persons where age < 18;
+// List the persons who are of the age below 18
+
+select * from persons where location = 'hubballi';
+// List the persons from the city hubballi
+
+select * from persons where age between 20 and 50;
+// List the persons aged between 20 and 50
+
+select * from persons where name like 'a%';
+// List all the persons whose name starts with 'a'
+
+select * from persons where name like 'a%a';
+// List all the persons whose name starts with 'a' and ends with 'a'
+
+select * from persons where name like 'a__a';
+-- List all the persons whose name starts with 'a' and ends with 'a' and has totally 4 characters in it
+
+select * from persons where location in('hubballi', 'dharwad', 'belagavi');
+OR
+select * from persons where location = 'hubballi' or location = 'dharwad' or location = 'belagavi';
+-- List persons who are from hubballi, dharwad and belagavi
+
+select * from persons where location = null; // incorect
+select * from persons where location = 'null';// incorrect
+select * from persons where location is null;//correct
+-- List the rows where location is not added
+
+select avg(age) as average_age from persons;
+-- Print average age of all persons
+
+
+create table employees(id int primary key auto_increment, name varchar(50) not null, designation varchar(40) not null, technology varchar(30) not null, phone_num bigint unique, commission int, salary float default 0, years_of_exp int);
+
+
+byte	tinyint
+short	smallint
+int		int
+long	bigint
+
+1 1 1 0 0 1
+32 + 16 + 8 + 1 = 57
+
+Queries:
+1. Update salary and technology of the employee with specific id.
+2. Alter table (meta data) persons add constraint not null to location.
+3. Alter table employees change the data type of commission from int to float
+4. delete the employees who have the designation 'designer'
+5. delete the employee with a specific id
+6. search for a person with specific id
+7. search for employees of specific designation
+---------
+group by
+1. Print the average salaries of employees of different designations
+2. Print the sum of salaries of employees of different technology.
+3. Print all the columns of all rows, but print commission+salary as Total_salary
+
+ifnull(commission, 0) + salary as total_salary

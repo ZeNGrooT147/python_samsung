@@ -1,0 +1,21 @@
+
+DAY 10(18/12/2024)
+
+1. Create a excel sheet with columns: USN and Name
+2. Read the data of excel sheet row wise
+3. Create a template HTML for the certificate (workshop certificate)
+	The template should have 2 place holders (variables) to accept the usn and student name.
+4. Read the excel sheet (.csv file) row wise
+	1. Insert the usn and name into the html
+	2. generate the name of the html with student usn
+	3. Save the .html file
+	4. Convert all the html files into pdf files
+
+
+RestFul APIs
+get			listAll()
+get/id		search()
+post		insert_row()
+put			update_row()
+delete		delete_row()
+

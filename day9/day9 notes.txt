@@ -1,0 +1,49 @@
+
+DAY 09(17/12/2024)
+
+
+host: 
+port:
+username:
+password:
+database:
+charset:
+
+Common steps between all the CRUD (Restful APIs) operations are:
+
+set the query and read data of the query
+get the connection object and the cursor object
+execute/run the query
+Process the result set (if searchRow or listAll)
+commit the changes if DML
+close the cursor object and the connection object
+
+
+Pandas
+
+python pandas script to read an excel sheet having 2 columns id and name
+
+pip install pandas openpyxl
+
+import pandas as pd
+
+# Define the path to the Excel file
+file_path = 'your_file.xlsx'
+
+# Read the Excel file into a pandas DataFrame
+df = pd.read_excel(file_path)
+
+# Display the first few rows of the DataFrame
+print(df.head())
+
+Explanation:
+file_path is the location of your Excel file. Replace 'your_file.xlsx' with the path to your file.
+pd.read_excel(file_path) reads the Excel file into a pandas DataFrame.
+df.head() will display the first 5 rows of the DataFrame, so you can inspect the data.
+
+
+Make sure your Excel file has columns labeled id and name. If the column names are different, you can specify them using the names parameter like this:
+df = pd.read_excel(file_path, names=['id', 'name'])
+
+This will ensure the columns are named id and name, regardless of how they appear in the file.
+
